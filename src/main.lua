@@ -13,7 +13,7 @@ local lib = mods['adamant-Modpack_Lib']
 config = chalk.auto('config.lua')
 public.config = config
 
-local backup, revert = lib.createBackupSystem()
+local _, revert = lib.createBackupSystem()
 
 -- =============================================================================
 -- MODULE DEFINITION

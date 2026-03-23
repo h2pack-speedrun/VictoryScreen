@@ -1,9 +1,31 @@
-# Show Arcana and Fear on the initial Victory Screen
+# Show Arcana and Fear on Victory Screen
 
-Displays the Arcana and Fear victory screen.
+> Displays your equipped Arcana Cards and active Fear on the run victory screen.
 
-Part of the H2-Modpack
+## Features
 
-## Install
+- Displays equipped Arcana Card icons on the victory screen.
+- Displays active Fear icons on the victory screen.
+- Provides an at-a-glance summary of your build upon completing a run.
 
-- Install using standard thunderstore process to install mods
+## Installation
+
+Install via [r2modman](https://hades2.thunderstore.io/) or manually by placing the mod folder in your `Hades II/plugins` directory.
+
+## Configuration
+
+This mod can be enabled or disabled via the **Adamant Core** settings menu (`F10` by default) under the "QoL Settings" tab.
+
+## Development
+
+This module is part of the [H2 Modular Modpack](https://github.com/h2-modpack/h2-modular-modpack). Please read the main project documentation for information on architecture and conventions.
+
+- **[Project README](https://github.com/h2-modpack/h2-modular-modpack/blob/main/README.md)**: For local setup and prerequisites.
+- **[Core CONTRIBUTING.md](https://github.com/h2-modpack/adamant-modpack-Core/blob/main/CONTRIBUTING.md)**: For architecture, discovery system, and UI.
+- **[Lib CONTRIBUTING.md](https://github.com/h2-modpack/adamant-modpack-Lib/blob/main/CONTRIBUTING.md)**: For the public API reference, module contract, and shared utilities.
+
+### Local Setup
+
+1.  Clone this repo.
+2.  Run `Setup/init_repo.bat` (Windows) or `Setup/init_repo.sh` (Linux) to configure git hooks.
+3.  Run `Setup/deploy_local.bat` (Windows, as admin) or `Setup/deploy_local.sh` (Linux) to copy assets, generate the manifest, and create a symlink to your r2modman profile.

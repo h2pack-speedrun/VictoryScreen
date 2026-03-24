@@ -27,6 +27,7 @@ public.definition = {
     tooltip  = "Displays the Arcana and Fear victory screen.",
     default  = true,
     dataMutation = false,
+    modpackModule = true,
 }
 
 -- =============================================================================

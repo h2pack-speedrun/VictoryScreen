@@ -286,7 +286,7 @@ end
 
 local function registerHooks()
     modutil.mod.Path.Wrap("OpenRunClearScreen", function(base)
-        if lib.isEnabled(config) then
+        if lib.isEnabled(config, public.definition.modpack) then
             thread(function()
                 wait(0.5)
                 local metaEndY = CreateMetaUpgradeDisplay()
@@ -297,14 +297,14 @@ local function registerHooks()
     end)
 
     modutil.mod.Path.Wrap("CloseRunClearScreen", function(base, screen)
-        if lib.isEnabled(config) then
+        if lib.isEnabled(config, public.definition.modpack) then
             DestroyDisplays()
         end
         base(screen)
     end)
 
     modutil.mod.Path.Wrap("TraitTrayScreenRemoveItems", function(base, screen)
-        if not lib.isEnabled(config) then return base(screen) end
+        if not lib.isEnabled(config, public.definition.modpack) then return base(screen) end
 
         local savedIcons = {}
         for _, id in ipairs(MetaUpgradeDisplay.Components) do
@@ -341,8 +341,8 @@ modutil.once_loaded.game(function()
     loader.load(function()
         import_as_fallback(rom.game)
         registerHooks()
-        if lib.isEnabled(config) then apply() end
-        if public.definition.dataMutation and not mods['adamant-Modpack_Core'] then
+        if lib.isEnabled(config, public.definition.modpack) then apply() end
+        if public.definition.dataMutation and not lib.isCoordinated(public.definition.modpack) then
             SetupRunData()
         end
     end)

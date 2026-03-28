@@ -27,7 +27,7 @@ public.definition = {
     tooltip  = "Displays the Arcana and Fear victory screen.",
     default  = true,
     dataMutation = false,
-    modpack = "h2-modpack",
+    modpack = "speedrun",
 }
 
 -- =============================================================================
